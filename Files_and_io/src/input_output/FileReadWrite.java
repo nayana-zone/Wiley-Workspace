@@ -12,7 +12,7 @@ public class FileReadWrite {
 	public static void main(String[] args) {
 		  try {
 	            // Input from the user
-	            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+	            Scanner scanner = new Scanner(System.in);
 	            
 	            // Writing to a file
 	            FileWriter writer = new FileWriter("textFile.txt");
@@ -20,12 +20,12 @@ public class FileReadWrite {
 	            
 	           
 	            do {
-	                System.out.println("Enter text to be written: ");
-	                String input = reader.readLine();
+	                System.out.print("Enter text to be written: ");
+	                String input = scanner.nextLine();
 	                bufferedWriter.write(input);
 	                bufferedWriter.newLine();
 	                System.out.print("Want to add more? (Y/N): ");
-	            } while (reader.readLine().equalsIgnoreCase("Y"));
+	            } while (scanner.nextLine().equalsIgnoreCase("Y"));
 
 	            bufferedWriter.close();
 	            
@@ -38,8 +38,12 @@ public class FileReadWrite {
 	            while ((line = bufferedReader.readLine()) != null) {
 	                System.out.println(line);
 	            }
+
+	            bufferedReader.close();
+	            scanner.close(); 
 	        } catch (IOException e) {
 	            e.printStackTrace();
 	        }
 	    }
 	}
+
