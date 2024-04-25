@@ -47,21 +47,5 @@ public class Email {
 	}
 }
 
-/*int maxEmails = 0;
-for (List<String> emailsList : emailMap.values()) {
-    maxEmails = Math.max(maxEmails, emailsList.size());
-}
 
-// Print emails side by side for each category
-for (int i = 0; i < maxEmails; i++) {
-    for (Map.Entry<String, List<String>> entry : emailMap.entrySet()) {
-        List<String> emailsList = entry.getValue();
-        if (i < emailsList.size()) {
-            System.out.print(emailsList.get(i) + "\t\t");
-        } else {
-            System.out.print("\t\t\t\t"); // For alignment
-        }
-    }
-    System.out.println();
-}*/
 
